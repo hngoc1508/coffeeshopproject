@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ sơ - Coffee House</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo"><i class="fas fa-coffee"></i> COFFEE HOUSE</a>
+            <nav class="nav-links">
+                <a href="index.html">Thực đơn</a>
+                <a href="news.html">Tin tức</a>
+            </nav>
+            <div class="account-area"></div>
+        </div>
+    </header>
+
+    <div class="container" style="margin-top:40px; max-width:700px;">
+        <h2>Hồ sơ của tôi</h2>
+        <div id="profile" style="margin-top:12px;"></div>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+    <script>
+        function renderProfile(){
+            const cur = getCurrentUser();
+            const el = document.getElementById('profile');
+            if (!cur) { el.innerHTML = '<p>Bạn chưa đăng nhập. <a href="login.html">Đăng nhập</a></p>'; return; }
+            el.innerHTML = `
+                <div style="display:flex; flex-direction:column; gap:10px;">
+                    <div><strong>Họ tên:</strong> <span id="pf-name">${cur.name}</span></div>
+                    <div><strong>Email:</strong> ${cur.email}</div>
+                    <div><strong>Số điện thoại:</strong> <span id="pf-phone">${cur.phone}</span></div>
+                    <div><strong>Điểm thành viên:</strong> <span style="color:var(--accent-color); font-weight:700;">${cur.points}</span></div>
+                    <button id="edit-profile" class="btn-cta">Chỉnh sửa thông tin</button>
+                </div>
+            `;
+            document.getElementById('edit-profile').addEventListener('click', () => {
+                const name = prompt('Họ và tên:', cur.name);
+                const phone = prompt('Số điện thoại:', cur.phone);
+                if (name!==null && phone!==null) {
+                    const users = loadUsers();
+                    const i = users.findIndex(u => u.id === cur.id);
+                    users[i].name = name; users[i].phone = phone; saveUsers(users); alert('Đã cập nhật'); updateHeaderAuth(); renderProfile();
+                }
+            });
+        }
+        renderProfile();
+    </script>
+</body>
+</html>

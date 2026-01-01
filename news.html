@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Coffee House</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo"><i class="fas fa-coffee"></i> COFFEE HOUSE</a>
+            <nav class="nav-links">
+                <a href="index.html">Thực đơn</a>
+                <a href="news.html" class="active">Tin tức</a>
+                <a href="about.html">Về chúng tôi</a>
+                <a href="contact.html">Liên hệ</a>
+            </nav>
+            <a href="card.html" class="cart-icon">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-badge" id="cart-count">0</span>
+            </a>
+            <div class="account-area" style="margin-left:12px;"></div>
+        </div>
+    </header>
+
+    <div class="container" style="margin-top: 50px;">
+        <h2 style="border-bottom: 2px solid var(--primary-color); display: inline-block; margin-bottom: 30px;">Góc chia sẻ</h2>
+        
+        <div style="display: grid; gap: 30px;">
+            <article style="display: flex; gap: 20px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: var(--shadow);">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=300" style="width: 200px; height: 150px; object-fit: cover; border-radius: 4px;">
+                <div>
+                    <h3><a href="#">Xu hướng Cold Brew lên ngôi mùa hè</a></h3>
+                    <p style="color: #777; font-size: 0.9rem; margin: 10px 0;">Cold brew (cà phê ủ lạnh) đang trở thành thức uống không thể thiếu...</p>
+                    <a href="#" style="color: var(--accent-color); font-weight: bold;">Đọc tiếp &rarr;</a>
+                </div>
+            </article>
+
+            <article style="display: flex; gap: 20px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: var(--shadow);">
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=300" style="width: 200px; height: 150px; object-fit: cover; border-radius: 4px;">
+                <div>
+                    <h3><a href="#">Sự khác biệt giữa Arabica và Robusta</a></h3>
+                    <p style="color: #777; font-size: 0.9rem; margin: 10px 0;">Hai loại hạt cà phê phổ biến nhất thế giới có gì khác nhau...</p>
+                    <a href="#" style="color: var(--accent-color); font-weight: bold;">Đọc tiếp &rarr;</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</body>
+</html>

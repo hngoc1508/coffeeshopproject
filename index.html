@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee House - Order Online</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo"><i class="fas fa-coffee"></i> COFFEE HOUSE</a>
+            
+            <nav class="nav-links">
+                <a href="index.html" class="active">Thực đơn</a>
+                <a href="news.html">Tin tức</a>
+                <a href="about.html">Về chúng tôi</a>
+                <a href="contact.html">Liên hệ</a>
+            </nav>
+
+            <a href="card.html" class="cart-icon">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-badge" id="cart-count">0</span>
+            </a>
+
+            <!-- Compact view toggle (single small icon) -->
+            <div class="view-toggle-wrap" style="position:relative;">
+                <button class="view-toggle" aria-label="Chế độ xem" title="Chế độ xem">
+                    <i class="fas fa-th-large"></i>
+                </button>
+                <div class="view-toast" aria-hidden="true" hidden>Grid</div>
+            </div>
+            <div class="account-area" style="margin-left:12px;"></div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Hương vị đánh thức mọi giác quan</h2>
+            <p>Order trực tuyến - Giao hàng tận nơi trong 30 phút</p>
+            <button class="btn-cta" onclick="document.getElementById('menu-section').scrollIntoView()">ĐẶT NGAY</button>
+        </div>
+    </section>
+
+    <div class="container" id="menu-section" style="padding-bottom: 50px;">
+        <div class="section-header">
+            <h3>Thực đơn hôm nay</h3>
+            <div class="divider"></div>
+        </div>
+
+        <div class="menu-tabs">
+            <button class="tab-btn active" data-filter="all">Tất cả</button>
+            <button class="tab-btn" data-filter="coffee">Cà phê</button>
+            <button class="tab-btn" data-filter="tea">Trà trái cây</button>
+            <button class="tab-btn" data-filter="cake">Bánh ngọt</button>
+        </div>
+
+        <div id="menu-grid" class="product-grid">
+            </div>
+    </div>
+
+    <section class="news-mini">
+        <div class="container">
+            <div class="section-header">
+                <h3>Câu chuyện Cà phê</h3>
+                <a href="news.html" style="font-size:0.9rem; text-decoration:underline;">Xem tất cả bài viết</a>
+            </div>
+
+            <div class="news-grid">
+                <div class="news-card-small">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500" alt="News">
+                    <h5><a href="news.html">Xu hướng Cold Brew lên ngôi mùa hè</a></h5>
+                    <p style="font-size: 0.85rem; color:#777;">Cold Brew đang chinh phục giới trẻ văn phòng...</p>
+                </div>
+                <div class="news-card-small">
+                    <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=500" alt="News">
+                    <h5><a href="news.html">Tìm hiểu về hạt Arabica Cầu Đất</a></h5>
+                    <p style="font-size: 0.85rem; color:#777;">Hương vị đặc trưng của vùng đất Tây Nguyên...</p>
+                </div>
+                <div class="news-card-small">
+                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500" alt="News">
+                    <h5><a href="news.html">Nghệ thuật Latte Art cơ bản</a></h5>
+                    <p style="font-size: 0.85rem; color:#777;">Hướng dẫn tạo hình trái tim cho người mới...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Coffee House. Design by You.</p>
+        <div style="margin-top:10px;">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

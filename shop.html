@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực đơn - Tạp chí Cà phê</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="brand-name">
+                <h1><i class="fas fa-coffee"></i> TẠP CHÍ CÀ PHÊ</h1>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="shop.html" class="active">Thực đơn</a></li>
+            <li><a href="#">Tin tức</a></li>
+            <li><a href="#">Liên hệ</a></li>
+            <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Giỏ hàng <span id="cart-count">0</span></a></li>
+        </ul>
+    </nav>
+
+    <div class="container main-layout">
+        <main>
+            <h2 style="color: #6F4E37; border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-bottom: 20px;">Tất cả sản phẩm</h2>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="img-box"><img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=500" alt="Espresso"></div>
+                    <div class="product-info">
+                        <h3>Espresso Premium</h3>
+                        <span class="price">35.000 đ</span>
+                        <button class="btn-primary" onclick="addToCart(1, 'Espresso Premium', 35000, 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=500')">Thêm</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="img-box"><img src="https://images.unsplash.com/photo-1559305616-3f99cd43e353?w=500" alt="Croissant"></div>
+                    <div class="product-info">
+                        <h3>Bánh Croissant</h3>
+                        <span class="price">25.000 đ</span>
+                        <button class="btn-primary" onclick="addToCart(4, 'Bánh Croissant', 25000, 'https://images.unsplash.com/photo-1559305616-3f99cd43e353?w=500')">Thêm</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="img-box"><img src="https://images.unsplash.com/photo-1619158403521-ed919b4c29c8?w=500" alt="Matcha"></div>
+                    <div class="product-info">
+                        <h3>Matcha Latte</h3>
+                        <span class="price">45.000 đ</span>
+                        <button class="btn-primary" onclick="addToCart(5, 'Matcha Latte', 45000, 'https://images.unsplash.com/photo-1619158403521-ed919b4c29c8?w=500')">Thêm</button>
+                    </div>
+                </div>
+
+                </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Tạp chí Cà phê.</p>
+    </footer>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

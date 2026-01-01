@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký - Coffee House</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo"><i class="fas fa-coffee"></i> COFFEE HOUSE</a>
+            <nav class="nav-links">
+                <a href="index.html">Thực đơn</a>
+                <a href="news.html">Tin tức</a>
+            </nav>
+            <div class="account-area"></div>
+        </div>
+    </header>
+
+    <div class="container" style="margin-top:40px; max-width:600px;">
+        <h2>Đăng ký</h2>
+        <form id="register-form" style="display:flex; flex-direction:column; gap:12px; margin-top:12px;">
+            <input name="name" placeholder="Họ và tên" required style="padding:10px;">
+            <input name="phone" placeholder="Số điện thoại" required style="padding:10px;">
+            <input name="email" type="email" placeholder="Email" required style="padding:10px;">
+            <input name="password" type="password" placeholder="Mật khẩu" required style="padding:10px;">
+            <button class="btn-cta" type="submit">Đăng ký</button>
+        </form>
+        <p style="margin-top:10px;">Đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+    <script>
+        document.getElementById('register-form').addEventListener('submit', function(e){
+            e.preventDefault();
+            const f = e.target;
+            const data = { name: f.name.value.trim(), phone: f.phone.value.trim(), email: f.email.value.trim(), password: f.password.value };
+            const res = registerUser(data);
+            if (!res.ok) { alert(res.error); return; }
+            alert('Đăng ký thành công!');
+            location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
